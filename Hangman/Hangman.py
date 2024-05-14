@@ -1,15 +1,15 @@
 import random
-import Hangman_art
-import Hangman_words
+import hangman_art
+import hangman_words
 
 end_of_game = False
-word_list = Hangman_words.word_list
+word_list = hangman_words.word_list
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 lives = 6
 guessed_letters = []
 
-print(Hangman_art.logo)
+print(hangman_art.logo)
 # Testing code
 print(f'Pssst, the solution is {chosen_word}.')
 
@@ -50,4 +50,4 @@ while not end_of_game:
         print("You win.")
 
     print(f"Lives: {lives}")
-    print(Hangman_art.stages[lives])
+    print(hangman_art.stages[lives])
